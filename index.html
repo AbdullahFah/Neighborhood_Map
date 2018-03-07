@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="map" data-bind="click: showList"></div>
+        <div id="humberger" data-bind="click: showList, clickBubble: false">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div data-bind="css: listStatus">
+            <input id="searchBox" placeholder="Search" data-bind="textInput: searchInput, event: {keyup: filter}">
+            <div id="listBox"> 
+                <ul id="list" data-bind="foreach: visible">
+                    <li id="listElement" data-bind="text: name, click: $parent.triggerMarker"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="errorDiv"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0_hYA0J-c4ySH9tIrYRoI68-ho6A4QdE&callback=initMap"
+                async defer></script>
+    </body> 
+</html>
