@@ -89,10 +89,10 @@ var ViewModel = function () {
             url: 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + place.name() + '&format=json&callback=wikiCallback',
             dataType: "jsonp",
             success: function (response) {
-                console.log(response[0])
-                console.log(response[3][0])
-                let placeName = response[0]
-                let placeLink = response[3][0]
+                console.log(response[0]);
+                console.log(response[3][0]);
+                let placeName = response[0];
+                let placeLink = response[3][0];
 
                 var infoWindowString = '<div id="window"><h3>' + placeName + '</h3><p><a href=' + placeLink + '>' + placeLink +
                     '</a></p>';
