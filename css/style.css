@@ -38,7 +38,7 @@ html, body {
 @media only screen and (max-width: 600px){
     #humberger {
         position: fixed;
-        left: 2%;
+        left: 20%;
         top: 50px;
     }
     .container {
